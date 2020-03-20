@@ -14,22 +14,25 @@
     /* 기준크기1920px초과 */
 
     .wrap{width:50%;margin:0 auto;}
-    .pc_header{}
+    .mo_header{display:none;}
+    .mo_header>li{font-size:32px;}
+    .mo_header>li:first-child{float:left;}
+    .mo_header>li:last-child{float:right;}
+    
     .pc_header>li:first-child{float:left;}
     .pc_header>li:last-child{float:right;}
-    li.main_logo_top{}
     li.main_logo_top>div{float:left;}
     div.point{margin:12px 4px 0 0;}
     div.point::before{content:'';display:block;width:8px;height:8px;margin-bottom:7px;background:blue;}
     div.point::after{content:'';display:block;width:8px;height:8px;background:green;}
     div.point+div{font-weight:bold;font-size:2rem;}
     li.main_logo_bottom{text-align:right;}
-    .navigation{}
     .sub_nav a{font-size:20px;}
     .sub_nav>li{float:left;border-left:1px solid #333;padding:0 10px;}
     .sub_nav>li:first-child{border:none;}
     .sub_nav>li:last-child{padding-right:0;}
-
+    .nav>li{float:left;padding:0 20px;}
+    .nav a{font-size:20px;}
     /* 1920px 이하 */
     @media (max-width:1920px){
       .wrap{width:62.5%;}
@@ -40,12 +43,18 @@
     }
     /* 1024px 이하 */
     @media (max-width:1024px){
-      .wrap{width:93.75%;}
+      .wrap{width:100%;}
     }
 
     /* 768px 이하 */
     @media (max-width:768px){
-      .wrap{width:100%;}
+      .main_logo{display:none;}
+      .sub_nav a{font-size:16px;}
+      .sub_nav>li{width:25%;border:1px solid black;padding:0;text-align:center;background:red;}
+      .sub_nav>li:first-child{border:1px solid black;}
+      .nav>li{float:none;padding:0 20px;overflow:hidden;}
+      .nav>li::after{content:'+';display:inline-block;border:1px solid black;border-radius:50%;float:right;}
+      .mo_header{display:block;}
     }
     /* 640px 이하 */
     @media (max-width:640px){
@@ -60,7 +69,10 @@
 <body>
   <div class="wrap">
     <header class="header">
-      <ul class="mo_header"></ul>
+      <ul class="mo_header clearfix">
+        <li>모바일로고</li>
+        <li>햄버거</li>
+      </ul>
       <ul class="pc_header clearfix">
         <li class="main_logo">
           <ul>
@@ -80,7 +92,13 @@
             <li><a href="#">언어</a></li>
             <li><a href="#">개인정보처리방침</a></li>
           </ul>
-          <div class="nav"></div>
+          <ul class="nav clearfix">
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">사업영역</a></li>
+            <li><a href="#">지속가능경영</a></li>
+            <li><a href="#">투자정보</a></li>
+            <li><a href="#">고객지원</a></li>
+          </ul>
         </li>
       </ul>
     </header>
