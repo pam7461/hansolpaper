@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>한솔제지</title>
+  <style>
+    *{margin:0;border:none;padding:0;box-sizing:border-box;}
+    .clearfix::after{content:'';display:block;clear:both;}
+    a{text-decoration:none;color:#333;}
+    ul,ol,li{list-style:none;}
+    h1,h2,h3,h4,h5,h6,p,div,span,ul,ol,li,a,label,option{font-weight:400;font-size:10px;color:#333;vertical-align:baseline;}
+
+    /* 기준크기1920px초과 */
+
+    .wrap{width:50%;margin:0 auto;}
+    .pc_header{}
+    .pc_header>li:first-child{float:left;}
+    .pc_header>li:last-child{float:right;}
+    li.main_logo_top{}
+    li.main_logo_top>div{float:left;}
+    div.point{margin:12px 4px 0 0;}
+    div.point::before{content:'';display:block;width:8px;height:8px;margin-bottom:7px;background:blue;}
+    div.point::after{content:'';display:block;width:8px;height:8px;background:green;}
+    div.point+div{font-weight:bold;font-size:2rem;}
+    li.main_logo_bottom{text-align:right;}
+    .navigation{}
+    .sub_nav a{font-size:20px;}
+    .sub_nav>li{float:left;border-left:1px solid #333;padding:0 10px;}
+    .sub_nav>li:first-child{border:none;}
+    .sub_nav>li:last-child{padding-right:0;}
+
+    /* 1920px 이하 */
+    @media (max-width:1920px){
+      .wrap{width:62.5%;}
+    }
+    /* 1440px 이하 */
+    @media (max-width:1440px){
+      .wrap{width:83.33333333333333%;}
+    }
+    /* 1024px 이하 */
+    @media (max-width:1024px){
+      .wrap{width:93.75%;}
+    }
+
+    /* 768px 이하 */
+    @media (max-width:768px){
+      .wrap{width:100%;}
+    }
+    /* 640px 이하 */
+    @media (max-width:640px){
+      
+    }
+    /* 425px 이하 */
+    @media (max-width:425px){
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <ul class="mo_header"></ul>
+      <ul class="pc_header clearfix">
+        <li class="main_logo">
+          <ul>
+            <li class="main_logo_top clearfix">
+              <div class="point"></div>
+              <div>Hansol</div>
+            </li>
+            <li class="main_logo_bottom">
+              한솔제지
+            </li>
+          </ul>
+        </li>
+        <li class="navigation">
+          <ul class="sub_nav clearfix">
+            <li><a href="#">홈</a></li>
+            <li><a href="#">사이트맵</a></li>
+            <li><a href="#">언어</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+          </ul>
+          <div class="nav"></div>
+        </li>
+      </ul>
+    </header>
+    <!-- <section class="main_banner"></section> -->
+    <!-- <section class="quick_nav"></section> -->
+    <!-- <section class="papers"></section> -->
+    <!-- <section class="notice"></section> -->
+    <!-- <footer class="footer"></footer> -->
+  </div>
+</body>
+</html>
