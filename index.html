@@ -9,61 +9,22 @@
     .clearfix::after{content:'';display:block;clear:both;}
     a{text-decoration:none;color:#333;}
     ul,ol,li{list-style:none;}
-    h1,h2,h3,h4,h5,h6,p,div,span,ul,ol,li,a,label,option{font-weight:400;font-size:10px;color:#333;vertical-align:baseline;}
+    h1,h2,h3,h4,h5,h6,p,div,span,ul,ol,li,a,label,option{font-weight:400;font-size:14px;color:#333;vertical-align:baseline;}
+    img{vertical-align:bottom;}
 
-    /* 기준크기1920px초과 */
-
-    .wrap{width:50%;margin:0 auto;}
-    .mo_header{display:none;}
-    .mo_header>li{font-size:32px;}
-    .mo_header>li:first-child{float:left;}
-    .mo_header>li:last-child{float:right;}
+    /* 1280이상 pc버전*/
     
-    .pc_header>li:first-child{float:left;}
-    .pc_header>li:last-child{float:right;}
-    li.main_logo_top>div{float:left;}
-    div.point{margin:12px 4px 0 0;}
-    div.point::before{content:'';display:block;width:8px;height:8px;margin-bottom:7px;background:blue;}
-    div.point::after{content:'';display:block;width:8px;height:8px;background:green;}
-    div.point+div{font-weight:bold;font-size:2rem;}
-    li.main_logo_bottom{text-align:right;}
-    .sub_nav a{font-size:20px;}
-    .sub_nav>li{float:left;border-left:1px solid #333;padding:0 10px;}
-    .sub_nav>li:first-child{border:none;}
-    .sub_nav>li:last-child{padding-right:0;}
-    .nav>li{float:left;padding:0 20px;}
-    .nav a{font-size:20px;}
-    /* 1920px 이하 */
-    @media (max-width:1920px){
-      .wrap{width:62.5%;}
-    }
-    /* 1440px 이하 */
-    @media (max-width:1440px){
-      .wrap{width:83.33333333333333%;}
-    }
-    /* 1024px 이하 */
-    @media (max-width:1024px){
-      .wrap{width:100%;}
+
+    /* 1279이하 테블릿버전*/
+    @media (max-width:1279px){
+
     }
 
-    /* 768px 이하 */
-    @media (max-width:768px){
-      .main_logo{display:none;}
-      .sub_nav a{font-size:16px;}
-      .sub_nav>li{width:25%;border:1px solid black;padding:0;text-align:center;background:red;}
-      .sub_nav>li:first-child{border:1px solid black;}
-      .nav>li{float:none;padding:0 20px;overflow:hidden;}
-      .nav>li::after{content:'+';display:inline-block;border:1px solid black;border-radius:50%;float:right;}
-      .mo_header{display:block;}
-    }
-    /* 640px 이하 */
+    /* 640이하 모바일버전 */
     @media (max-width:640px){
-      
+
     }
-    /* 425px 이하 */
-    @media (max-width:425px){
-      
-    }
+
   </style>
 </head>
 <body>
@@ -86,19 +47,23 @@
           </ul>
         </li>
         <li class="navigation">
-          <ul class="sub_nav clearfix">
-            <li><a href="#">홈</a></li>
-            <li><a href="#">사이트맵</a></li>
-            <li><a href="#">언어</a></li>
-            <li><a href="#">개인정보처리방침</a></li>
-          </ul>
-          <ul class="nav clearfix">
-            <li><a href="#">회사소개</a></li>
-            <li><a href="#">사업영역</a></li>
-            <li><a href="#">지속가능경영</a></li>
-            <li><a href="#">투자정보</a></li>
-            <li><a href="#">고객지원</a></li>
-          </ul>
+          <nav>
+            <ul class="sub_nav clearfix">
+              <li><a href="#">홈</a></li>
+              <li><a href="#">사이트맵</a></li>
+              <li><a href="#">언어</a></li>
+              <li><a href="#">개인정보처리방침</a></li>
+            </ul>
+          </nav>
+          <nav>
+            <ul class="nav clearfix">
+              <li><a href="#">회사소개</a></li>
+              <li><a href="#">사업영역</a></li>
+              <li><a href="#">지속가능경영</a></li>
+              <li><a href="#">투자정보</a></li>
+              <li><a href="#">고객지원</a></li>
+            </ul>
+          </nav>
         </li>
       </ul>
     </header>
