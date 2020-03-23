@@ -39,6 +39,7 @@
     nav:last-child li{margin-left:30px;}
     nav:last-child a{font-size:1.5em;font-weight:900;}
 
+    .main_banner{height:500px;background:yellow;}
     /* 1279이하 테블릿버전*/
     @media (max-width:1279px){
     }
@@ -55,11 +56,21 @@
     }
     /* 760이하 */
     @media (max-width:760px){
-      .pc_header{display:none;}
-      .mo_header{display:block;}
       .header{padding: 16px 0 6px;}
-    }
+      .pc_header{display:none;}
+      .pc_header{width:100%;background:white;position:absolute;left:0;top:57px;}
+      .pc_header .main_logo{display:none;}
+      nav:first-child{display:block;}
+      .sub_nav{width:100%;}
+      .sub_nav li{width:25%;border:1px solid #333;padding:10px;background:green;text-align:center;}
+      .sub_nav a{font-weight:bold;color:white;}
+      nav:first-child>ul>li::before{display:none;}
+      nav>ul>li:last-child {margin-right:0;}
+      .mo_header{display:block;}
 
+      nav:last-child>ul>li{float:none;}
+      .navigation>nav:last-child>.nav{float:none;}
+    }
 
     /* 640이하 모바일버전 */
     @media (max-width:640px){
@@ -82,7 +93,7 @@
           <span></span>
         </li>
       </ul>
-      <ul class="pc_header">
+      <ul class="pc_header" id="menu">
         <li class="main_logo">
           <ul>
             <li class="main_logo_top clearfix">
@@ -115,7 +126,7 @@
         </li>
       </ul>
     </header>
-    <!-- <section class="main_banner"></section> -->
+    <section class="main_banner"></section>
     <!-- <section class="quick_nav"></section> -->
     <!-- <section class="papers"></section> -->
     <!-- <section class="notice"></section> -->
