@@ -13,7 +13,20 @@
     img{vertical-align:bottom;}
 
     /* 1280이상 pc버전*/
-    
+    .wrap{width:93.75%;max-width:1200px;margin:0 auto;}
+    .header{border-top:2px solid blue;padding:20px 0;position: relative;background:red;}
+    .mo_header{display:none;}
+    .main_logo{position:absolute;left:10px;top:30px;}
+    .navigation{}
+    .navigation>nav{}
+    .navigation>nav>ul{float:right;}
+    nav>ul>li{float:left;}
+    nav:first-child{margin-bottom:20px;}
+    nav:first-child>ul>li::before{content:'';display:inline-block;width:1px;height:10px;margin:0 20px;background:#333;}
+    nav:first-child>ul>li:first-child::before{display:none;}
+    nav>ul>li:last-child{margin-right:10px;}
+    nav:last-child li{margin-left:30px;}
+    nav:last-child a{font-size:1.5em;font-weight:900;}
 
     /* 1279이하 테블릿버전*/
     @media (max-width:1279px){
@@ -34,7 +47,7 @@
         <li>모바일로고</li>
         <li>햄버거</li>
       </ul>
-      <ul class="pc_header clearfix">
+      <ul class="pc_header">
         <li class="main_logo">
           <ul>
             <li class="main_logo_top clearfix">
@@ -47,7 +60,7 @@
           </ul>
         </li>
         <li class="navigation">
-          <nav>
+          <nav class="clearfix">
             <ul class="sub_nav clearfix">
               <li><a href="#">홈</a></li>
               <li><a href="#">사이트맵</a></li>
@@ -55,7 +68,7 @@
               <li><a href="#">개인정보처리방침</a></li>
             </ul>
           </nav>
-          <nav>
+          <nav class="clearfix">
             <ul class="nav clearfix">
               <li><a href="#">회사소개</a></li>
               <li><a href="#">사업영역</a></li>
