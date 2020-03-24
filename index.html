@@ -67,11 +67,11 @@
     .papers{margin-bottom:30px;}
     .papers li{float:left;width:22.5%;margin-right:3.333333333333333%;}
     .papers li:last-child{margin-right:0;}
-    .paper_tit{margin-bottom:25px;border-bottom:1px solid #999;padding-bottom:10px;}
-    .paper_tit h3{float:left;font-weight:bold;font-size:1.4em;}
-    .paper_tit p{float:right;}
-    .paper_tit p a{font-weight:bold;font-size:0.9em;}
-    .paper_tit p a::after{content:'>';display:inline-block;margin-left:6px;}
+    .tit{margin-bottom:25px;border-bottom:1px solid #999;padding-bottom:10px;}
+    .tit h3{float:left;font-weight:bold;font-size:1.4em;}
+    .tit p{float:right;}
+    .tit p a{font-weight:bold;font-size:0.9em;}
+    .tit p a::after{content:'>';display:inline-block;margin-left:6px;}
 
     .paper_img{margin-bottom:25px;}
     .paper_img a:nth-child(2){display:none;}
@@ -79,7 +79,16 @@
 
     .paper_txt p{font-weight:bold;line-height:1.5em;}
     
-    
+    /* notice section */
+    .notice>ul>li{float:left;width:48.33333333333333%;}
+    .notice>ul>li:first-child{margin-right:3.333333333333333%;}
+
+    .notice_txt{}
+    .notice_txt li{margin-bottom:10px;}
+    .notice_txt li:last-child{margin-bottom:0;}
+    .notice_txt div:first-child{float:left;}
+    .notice_txt div:last-child{float:right;font-size:0.9em}
+
 
 
 
@@ -111,9 +120,9 @@
       nav:last-child a{font-size:1.3em;}
 
       /* papers section */
-      .paper_tit{margin-bottom:15px;padding-bottom:6px;}
-      .paper_tit h3{float:none;text-align:center;}
-      .paper_tit p{display:none;}
+      .tit{margin-bottom:15px;padding-bottom:6px;}
+      .tit h3{float:none;text-align:center;}
+      .tit p{display:none;}
       .paper_img{margin-bottom:15px;}
       .paper_txt p{font-size:0.85em;}
     }
@@ -163,8 +172,8 @@
       .papers .row{margin:0 10px;background:#007dc6;}
       .papers li{border-right:1px solid #ccc;padding:20px 0 6px;width:25%;margin-right:0;}
       .papers li:last-child{border-right:none;}
-      .paper_tit{border-bottom:none;}
-      .paper_tit h3{color:white;}
+      .tit{border-bottom:none;}
+      .tit h3{color:white;}
       .paper_img a:nth-child(1){display:none;}
       .paper_img a:nth-child(2){display:block;position:relative;width:100%;height:60px;}
       .mo_img{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:50%;}
@@ -276,7 +285,7 @@
     <section class="papers">
       <ul class="row clearfix">
         <li>
-          <div class="paper_tit clearfix">
+          <div class="tit clearfix">
             <h3>인쇄용지</h3>
             <p><a href="#">바로가기</a></p>
           </div>
@@ -289,7 +298,7 @@
           </div>
         </li>
         <li>
-          <div class="paper_tit clearfix">
+          <div class="tit clearfix">
             <h3>패키징용지</h3>
             <p><a href="#">바로가기</a></p>
           </div>
@@ -302,7 +311,7 @@
           </div>
         </li>
         <li>
-          <div class="paper_tit clearfix">
+          <div class="tit clearfix">
             <h3>특수지</h3>
             <p><a href="#">바로가기</a></p>
           </div>
@@ -315,7 +324,7 @@
           </div>
         </li>
         <li>
-          <div class="paper_tit clearfix">
+          <div class="tit clearfix">
             <h3>감열지</h3>
             <p><a href="#">바로가기</a></p>
           </div>
@@ -329,7 +338,66 @@
         </li>
       </ul>
     </section>
-    <!-- <section class="notice"></section> -->
+    <section class="notice">
+      <ul class="row clearfix">
+        <li>
+          <div class="tit clearfix">
+            <h3>공지사항</h3>
+            <p><a href="#">바로가기</a></p>
+          </div>
+          <ul class="notice_txt">
+            <li class="clearfix">
+              <div><a href="#">020년 한솔제지 국산고지 사용 확대에 대한 안내</a></div>
+              <div>2020-01-01</div>
+            </li>
+            <li class="clearfix">
+              <div><a href="#">020년 한솔제지 국산고지 사용 확대에 대한 안내</a></div>
+              <div>2020-01-01</div>
+            </li>
+            <li class="clearfix">
+              <div><a href="#">020년 한솔제지 국산고지 사용 확대에 대한 안내</a></div>
+              <div>2020-01-01</div>
+            </li>
+            <li class="clearfix">
+              <div><a href="#">020년 한솔제지 국산고지 사용 확대에 대한 안내</a></div>
+              <div>2020-01-01</div>
+            </li>
+            <li class="clearfix">
+              <div><a href="#">020년 한솔제지 국산고지 사용 확대에 대한 안내</a></div>
+              <div>2020-01-01</div>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <div class="tit clearfix">
+            <h3>뉴스</h3>
+            <p><a href="#">바로가기</a></p>
+          </div>
+          <ul class="notice_txt">
+            <li class="clearfix">
+              <div><a href="#">020년 한솔제지 국산고지 사용 확대에 대한 안내</a></div>
+              <div>2020-01-01</div>
+            </li>
+            <li class="clearfix">
+              <div><a href="#">020년 한솔제지 국산고지 사용 확대에 대한 안내</a></div>
+              <div>2020-01-01</div>
+            </li>
+            <li class="clearfix">
+              <div><a href="#">020년 한솔제지 국산고지 사용 확대에 대한 안내</a></div>
+              <div>2020-01-01</div>
+            </li>
+            <li class="clearfix">
+              <div><a href="#">020년 한솔제지 국산고지 사용 확대에 대한 안내</a></div>
+              <div>2020-01-01</div>
+            </li>
+            <li class="clearfix">
+              <div><a href="#">020년 한솔제지 국산고지 사용 확대에 대한 안내</a></div>
+              <div>2020-01-01</div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
     <!-- <footer class="footer"></footer> -->
   </div>
   <!-- Initialize Swiper -->
