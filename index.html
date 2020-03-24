@@ -43,8 +43,16 @@
     nav:last-child li{margin-left:30px;}
     nav:last-child a{font-size:1.5em;font-weight:900;}
 
+    /* Main Banner section */
     .swiper-slide{overflow:hidden;position:relative;height:400px;}
     .swiper-slide img{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);}
+    .banner_txt{position:absolute;left:100px;top:50%;transform:translate(0, -54%);}
+    .banner_txt h2,.banner_txt p{color:white;}
+    .banner_txt h2{display:inline-block;margin-bottom:10px;border-bottom:2px solid white;font-weight:bolder;font-size:6em;}
+    .banner_txt p{font-size:2em;}
+    #next_btn{display:none;top:40%;}
+
+    
     /* .swiper-slide img{width:100%;} */
     /* 1279이하 테블릿버전*/
     @media (max-width:1279px){
@@ -77,11 +85,18 @@
 
       nav:last-child>ul>li{float:none;}
       .navigation>nav:last-child>.nav{float:none;}
+
+      #next_btn{display:block;}
     }
 
     /* 640이하 모바일버전 */
     @media (max-width:640px){
       .wrap{width:100%;}
+
+      .banner_txt{left:50px;}
+      .banner_txt h2{font-size:4em;}
+      .banner_txt p{font-size:1.6em;}
+
     }
 
     /* 540이하 */
@@ -154,19 +169,30 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <img src="images/banner01.jpg" alt="banner01">
+            <div class="banner_txt">
+              <h2>VISION</h2>
+              <p>고객에게 더나은 가치를 제공하는<br>글로벌 종이재조 기업</p>
+            </div>
           </div>
           <div class="swiper-slide">
             <img src="images/banner02.jpg" alt="banner03">
+            <div class="banner_txt">
+              <h2>NATURE</h2>
+              <p>한솔제지는 더나은 가치를 제공하는<br>글로벌 종이재조 기업</p>
+            </div>
           </div>
           <div class="swiper-slide">
             <img src="images/banner03.jpg" alt="banner03">
+            <div class="banner_txt">
+              <h2>PAPER</h2>
+              <p>인쇄용지 더나은 가치를 제공하는<br>글로벌 종이재조 기업</p>
+            </div>
           </div>
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
         <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div id="next_btn" class="swiper-button-next"></div>
       </div>
 
     </section>
