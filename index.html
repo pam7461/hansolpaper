@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.css" integrity="sha256-eN7gD6kRzzeXS87cycVGlO3smXA9o+yeN0BDkTVaOc0=" crossorigin="anonymous" />
 
   <style>
+    
     *{margin:0;border:none;padding:0;box-sizing:border-box;}
     .clearfix::after{content:'';display:block;clear:both;}
     a{text-decoration:none;color:#333;}
@@ -17,8 +18,8 @@
     img{vertical-align:bottom;}
 
     /* 1280이상 pc버전*/
-    .wrap{width:93.75%;max-width:1200px;margin:0 auto;}
-    .header{border-top:2px solid blue;padding:20px 0;position: relative;}
+    .wrap{width:93.75%;max-width:1200px;margin:0 auto;background:white;}
+    .header{border-top:2px solid blue;padding:20px 0;position: relative;background:white;}
     .mo_header{display:none;padding:0 10px;}
     .mo_header>li:first-child{float:left;}
     .mo_header>li:last-child{float:right;}
@@ -55,13 +56,33 @@
 
     /* quick nav section */
     .quick_nav{margin-bottom:30px;}
-    .quick_nav div{float:left;width:15%;margin:0 10px;border-bottom:1px solid green;padding:10px;position:relative;}
+    .quick_nav div{float:left;width:15%;margin-right:1.666666666666667%;border-bottom:1px solid green;padding:10px;position:relative;}
     .quick_nav div:hover{background:green;}
     .quick_nav div::after{position:absolute;right:10px;top:50%;transform:translate(0, -50%);content:'';display:inline-block;width:16px;height:16px;background:url('images/green_btn.png') no-repeat center;background-size:cover;cursor:pointer}
     .quick_nav div:hover::after{background-image:url('images/white_btn.png');}
     .quick_nav div:hover a{color:white;}
     .quick_nav div a{font-size:12px;line-height:20px;color:#008000;}    
     
+    /* papers section */
+    .papers{margin-bottom:30px;}
+    .papers li{float:left;width:22.5%;margin-right:3.333333333333333%;}
+    .papers li:last-child{margin-right:0;}
+    .paper_tit{margin-bottom:25px;border-bottom:1px solid #999;padding-bottom:10px;}
+    .paper_tit h3{float:left;font-weight:bold;font-size:1.4em;}
+    .paper_tit p{float:right;}
+    .paper_tit p a{font-weight:bold;font-size:0.9em;}
+    .paper_tit p a::after{content:'>';display:inline-block;margin-left:6px;}
+
+    .paper_img{margin-bottom:25px;}
+    .paper_img a:nth-child(2){display:none;}
+    .pc_img{width:100%;}
+
+    .paper_txt p{font-weight:bold;line-height:1.5em;}
+    
+    
+
+
+
     
     /* 1279이하 테블릿버전*/
     @media (max-width:1279px){
@@ -86,7 +107,17 @@
       nav:last-child{margin-top:10px;}
       nav:last-child li{margin-left:20px;}
       nav:last-child a{font-size:1.3em;}
+
+      /* papers section */
+      .paper_tit{margin-bottom:15px;padding-bottom:6px;}
+      .paper_tit h3{float:none;text-align:center;}
+      .paper_tit p{display:none;}
+      .paper_img{margin-bottom:15px;}
+      .paper_txt p{font-size:0.85em;}
     }
+
+
+
     /* 760이하 */
     @media (max-width:760px){
       .header{padding: 16px 0 6px;}
@@ -108,16 +139,34 @@
 
       /* quick nav section */
       .quick_nav{display:none;}
+
+      /* papers section */
+      
+      
     }
+
+
 
     /* 640이하 모바일버전 */
     @media (max-width:640px){
-      .wrap{width:100%;}
+      .wrap{width:100%;background:#ccc;}
 
+      .main_banner{margin-bottom:10px;}
       .banner_txt{left:50px;}
       .banner_txt h2{font-size:4em;}
       .banner_txt p{font-size:1.6em;}
 
+      /* papers section */
+      .papers{margin-bottom:10px;}
+      .papers .row{margin:0 10px;background:blue;}
+      .papers li{border-right:1px solid #ccc;padding:20px 0 6px;width:25%;margin-right:0;}
+      .papers li:last-child{border-right:none;}
+      .paper_tit{border-bottom:none;}
+      .paper_tit h3{color:white;}
+      .paper_img a:nth-child(1){display:none;}
+      .paper_img a:nth-child(2){display:block;position:relative;width:100%;height:60px;}
+      .mo_img{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:50%;}
+      .paper_txt{display:none;}
     }
 
     /* 540이하 */
@@ -227,8 +276,8 @@
             <p><a href="#">바로가기</a></p>
           </div>
           <div class="paper_img">
-            <a href="#"><img src="images/paper01.jpg" alt="paper01"></a>
-            <a href="#"><img src="images/pp01.png" alt="pp01"></a>
+            <a href="#"><img class="pc_img" src="images/paper01.jpg" alt="paper01"></a>
+            <a href="#"><img class="mo_img" src="images/pp01.png" alt="pp01"></a>
           </div>
           <div class="paper_txt">
             <p>인쇄작업성 및 품질균일성 등 최고급 한솔 인쇄용지를 확인하실 수 있습니다.</p>
@@ -240,8 +289,8 @@
             <p><a href="#">바로가기</a></p>
           </div>
           <div class="paper_img">
-            <a href="#"><img src="images/paper02.jpg" alt="paper02"></a>
-            <a href="#"><img src="images/pp02.png" alt="pp02"></a>
+            <a href="#"><img class="pc_img" src="images/paper02.jpg" alt="paper02"></a>
+            <a href="#"><img class="mo_img" src="images/pp02.png" alt="pp02"></a>
           </div>
           <div class="paper_txt">
             <p>종이를 재활용한 환경친화적인 한솔 패키징용지를 확인하실 수 있습니다.</p>
@@ -253,8 +302,8 @@
             <p><a href="#">바로가기</a></p>
           </div>
           <div class="paper_img">
-            <a href="#"><img src="images/paper03.jpg" alt="paper03"></a>
-            <a href="#"><img src="images/pp03.png" alt="pp03"></a>
+            <a href="#"><img class="pc_img" src="images/paper03.jpg" alt="paper03"></a>
+            <a href="#"><img class="mo_img" src="images/pp03.png" alt="pp03"></a>
           </div>
           <div class="paper_txt">
             <p>한솔제지만의 특별한 기술 집약적 용지인 특수지를 확인하실 수 있습니다.</p>
@@ -266,8 +315,8 @@
             <p><a href="#">바로가기</a></p>
           </div>
           <div class="paper_img">
-            <a href="#"><img src="images/paper04.jpg" alt="paper04"></a>
-            <a href="#"><img src="images/pp04.png" alt="pp04"></a>
+            <a href="#"><img class="pc_img" src="images/paper04.jpg" alt="paper04"></a>
+            <a href="#"><img class="mo_img" src="images/pp04.png" alt="pp04"></a>
           </div>
           <div class="paper_txt">
             <p>발색도, 보존성 등 우수한 품질의 한솔 감열지를 확인하실 수 있습니다.</p>
