@@ -39,9 +39,9 @@
     nav:last-child li{margin-left:30px;}
     nav:last-child a{font-size:1.5em;font-weight:900;}
 
-    .main_banner{height:500px;background:yellow;}
     /* 1279이하 테블릿버전*/
     @media (max-width:1279px){
+      
     }
 
     /* 860이하 */
@@ -75,6 +75,12 @@
     /* 640이하 모바일버전 */
     @media (max-width:640px){
       .wrap{width:100%;}
+    }
+
+    /* 540이하 */
+    @media (max-width:540px){
+      .sub_nav li{width:50%;}
+
     }
 
   </style>
@@ -135,12 +141,29 @@
       document.querySelector('#menu').style.display='none';
       document.querySelector('.mo_header').style.display='block';
       document.querySelector('.pc_header').style.top='57px';
+    ">
+      <!-- Swiper -->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="images/banner01.jpg" alt="banner01">
+          </div>
+          <div class="swiper-slide">
+            <img src="images/banner02.jpg" alt="banner03">
+          </div>
+          <div class="swiper-slide">
+            <img src="images/banner03.jpg" alt="banner03">
+          </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
 
-    "></section>
+    </section>
     <!-- <section class="quick_nav"></section> -->
     <!-- <section class="papers"></section> -->
     <!-- <section class="notice"></section> -->
     <!-- <footer class="footer"></footer> -->
-  </div>
+  </div> 
 </body>
 </html>
