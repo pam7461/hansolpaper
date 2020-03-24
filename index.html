@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>한솔제지</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.js" integrity="sha256-2AzmZuC/JWSxd9zvzxqNIBQIoB/uSRsSYtXJBhAkfjY=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.css" integrity="sha256-eN7gD6kRzzeXS87cycVGlO3smXA9o+yeN0BDkTVaOc0=" crossorigin="anonymous" />
+
   <style>
     *{margin:0;border:none;padding:0;box-sizing:border-box;}
     .clearfix::after{content:'';display:block;clear:both;}
@@ -39,6 +43,9 @@
     nav:last-child li{margin-left:30px;}
     nav:last-child a{font-size:1.5em;font-weight:900;}
 
+    .swiper-slide{overflow:hidden;position:relative;height:400px;}
+    .swiper-slide img{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);}
+    /* .swiper-slide img{width:100%;} */
     /* 1279이하 테블릿버전*/
     @media (max-width:1279px){
       
@@ -157,6 +164,9 @@
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
 
     </section>
@@ -164,6 +174,18 @@
     <!-- <section class="papers"></section> -->
     <!-- <section class="notice"></section> -->
     <!-- <footer class="footer"></footer> -->
-  </div> 
+  </div>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script> 
 </body>
 </html>
