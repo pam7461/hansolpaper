@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/reset.css">
+    <title>한솔제지</title>
+    <style>
+        @font-face {
+            font-family:'NotoSansKR';
+            src: url(./fonts/NotoSansKR-VariableFont_wght.ttf);
+        }
+        :root{
+            font-family:'NotoSansKR';
+            font-weight:400;
+            font-size:14px;
+            line-height:1;
+            color:#222;
+        }
+        .wrap{
+            overflow:hidden;
+        }
+        .header{
+            position:fixed;
+            left:0;
+            right:0;
+            top:0;            
+            z-index:100;            
+            border-bottom:1px solid #bbb;
+            background:#fff;
+        }
+        .container{
+            width:1240px;
+            height:93px;
+            margin:0 auto;
+            background:rgba(255,0,0,0.3);
+        }
+
+
+
+
+
+        .sec,.footer{
+            position:relative;
+            z-index:10;
+        }
+    </style>
+</head>
+<body>
+    <section class="wrap">
+        <header class="header">
+            <div class="container">
+                <h1>Hansol</h1>
+                <nav>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </nav>
+                <div class="q-nav">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <section class="sec sec01 sec-main-slider">섹션1</section>
+        <section class="sec sec02 sec-scd-slider">섹션2</section>
+        <section class="sec sec03 sec-together">섹션3</section>
+        <footer class="footer">푸터</footer>
+    </section>
+</body>
+</html>
