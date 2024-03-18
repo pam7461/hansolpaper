@@ -31,13 +31,46 @@
             background:#fff;
         }
         .container{
+            display:flex;
+            flex-flow:row nowrap;
+            justify-content:space-between;
+            align-items:center;
             width:1240px;
             height:93px;
             margin:0 auto;
-            background:rgba(255,0,0,0.3);
         }
-
-
+        .header h1 a{
+            position:relative;
+            display:flex;
+            flex-flow:column nowrap;
+            justify-content:space-between;
+            align-items:flex-end;
+            width:117px;
+            height:51px; 
+        }
+        .header h1 a span:first-child{
+            font-weight:800;
+            font-size:31px;
+        }
+        .header h1 a span:last-child{
+            font-weight:500;
+        }
+        .header h1 a::before,.header h1 a::after{
+            position:absolute;
+            left:0;
+            top:6px;
+            width:8px;
+            height:8px;
+            background:#00f;
+        }
+        .header h1 a::after{
+            top:21px;
+            background:#0f0;
+        }
+        
+        
+        
+        
 
 
 
@@ -51,22 +84,26 @@
     <section class="wrap">
         <header class="header">
             <div class="container">
-                <h1>Hansol</h1>
+                <h1>
+                    <a class="before after" href="./index.html">
+                        <span>Hansol</span><span>한솔제지</span>
+                    </a>
+                </h1>
                 <nav>
                     <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li><a href="#">제품소개</a></li>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">지속가능경영</a></li>
+                        <li><a href="#">투자정보</a></li>
+                        <li><a href="#">인재채용</a></li>
+                        <li><a href="#">소식</a></li>
                     </ul>
                 </nav>
                 <div class="q-nav">
                     <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li><a href="#">고객문의</a></li>
+                        <li><a href="#">가상전시관</a></li>
+                        <li><a href="#">Eng</a></li>
                     </ul>
                 </div>
             </div>
