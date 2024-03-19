@@ -73,11 +73,32 @@
             font-size:22px;            
         }
         .main-nav li{
+            position:relative;
             margin:0 16px;
-        }
+        }        
         .main-nav li:hover{
             color:#00f;
         }
+        .main-nav li::after{
+            position:absolute;
+            left:0;
+            top:55px;
+            content:'';
+            display:block;
+            width:0;
+            height:3px;
+            background:#00f;
+            transition:width 0.3s ease 0s;
+        }
+        
+
+        /* 나중에 스크립트로 대체된 내용 */
+        .main-nav li:hover::after{
+            width:100%;
+        }
+        /* 나중에 스크립트로 대체된 내용 */
+
+
         .q-nav ul{
             display:flex;
         }
