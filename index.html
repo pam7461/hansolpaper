@@ -40,7 +40,7 @@
             height:93px;
             margin:0 auto;
         }
-        .header h1 a{
+        .logo {
             position:relative;
             display:flex;
             flex-flow:column nowrap;
@@ -49,14 +49,14 @@
             width:117px;
             height:51px; 
         }
-        .header h1 a span:first-child{
+        .logo span:first-child{
             font-weight:800;
             font-size:31px;
         }
-        .header h1 a span:last-child{
+        .logo span:last-child{
             font-weight:500;
         }
-        .header h1 a::before,.header h1 a::after{
+        .logo::before,.logo::after{
             position:absolute;
             left:0;
             top:6px;
@@ -64,7 +64,7 @@
             height:8px;
             background:#00f;
         }
-        .header h1 a::after{
+        .logo::after{
             top:21px;
             background:#0f0;
         }
@@ -436,6 +436,53 @@
             font-size:18px;
             line-height:28px;
         }
+
+
+        .footer{
+            padding:54px 0;
+            background:#ccc;
+        }
+        .footer .container{
+            display:flex;            
+            width:1240px;
+            margin:0 auto;
+        }
+        .footer .footer-logo{
+            width:210px;
+        }
+        .footer address{
+            width:706px;
+            line-height:28px;
+        }
+        .footer .footer-nav{
+            width:324px;
+            display:flex;
+            flex-flow:row wrap;
+            justify-content:flex-end;           
+        }
+        .footer .footer-nav strong{
+            margin-right:30px;
+            padding-top:9px;
+            font-weight:700;
+            color:#000;
+        }
+        .footer .footer-nav select{
+            width:190px;
+            height:31px;
+            margin-bottom:14px;
+        }       
+        .footer .footer-nav .sns{
+            width:31px;
+            height:31px;
+            margin-left:9px;
+            background:url(./images/ico02.svg) no-repeat center;
+            background-size:contain;
+            text-indent:-999999px;
+        }
+        .footer .footer-nav .face{
+            background-image:url(./images/ico03.svg);
+        }
+
     </style>
 </head>
 <body>
@@ -443,7 +490,7 @@
         <header class="header">
             <div class="container">
                 <h1>
-                    <a class="before after" href="./index.html">
+                    <a class="logo before after" href="./index.html">
                         <span>Hansol</span><span>한솔제지</span>
                     </a>
                 </h1>
@@ -617,12 +664,26 @@
             </div>
         </section>
         <footer class="footer">
-            <div class="container">
-                <div>
-                    <div class="footer-logo"></div>
-                    <address></address>
+            <div class="container">                
+                <div class="footer-logo">
+                    <a class="logo before after" href="./index.html">
+                        <span>Hansol</span><span>한솔제지</span>
+                    </a>
                 </div>
-                <div class="footer-nav"></div>
+                <address>서울 중구 을지로 100(을지로2가) 파인애비뉴 B동 23-24층<br>Copyright 2020. Hansol Paper.,Ltd. All rights reserved.</address>                
+                <div class="footer-nav">
+                    <strong><a href="#">개인정보처리방침</a></strong>
+                    <select>
+                        <option disabled selected>Family Site</option>
+                        <option>한솔정유</option>
+                        <option>한솔미디어</option>
+                        <option>한솔엔터</option>
+                        <option>한솔전자</option>
+                        <option>한솔건축</option>
+                    </select>
+                    <a href="#" class="sns insta">인스타</a>
+                    <a href="#" class="sns face">패이스북</a>
+                </div>
             </div>
         </footer>
     </section>
