@@ -277,11 +277,35 @@
             transform:rotate(-135deg);
         }
         .sec01 .pager{
+            display:flex;
+            flex-flow:row nowrap;
             position:absolute;
             left:210px;
             right:210px;
-            top:666px;
-            border-top:1px solid #f00;
+            top:666px;            
+        }
+        .sec01 .pager li{            
+            width:16.66666666666667%;
+            border-top:2px solid #fff;
+            padding-top:24px;
+            font-weight:700;
+            font-size:20px;
+            color:#fff;
+            text-align:center;
+        }
+        .sec01 .pager li:first-child{            
+            color:#000;
+        }
+        .sec01 .pager::after{
+            content:'';
+            display:block;
+            position:absolute;
+            left:0;
+            top:0;
+            width:16.66666666666667%;
+            height:2px;
+            background:#000;
+            transition:0.3s;
         }
     </style>
 </head>
@@ -403,6 +427,7 @@
                     <li><a href="#">산업용지</a></li>
                     <li><a href="#">특수지</a></li>
                     <li><a href="#">감열지</a></li>
+                    <!-- ::after -->
                 </ul>
             </div>
         </section>
