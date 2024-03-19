@@ -186,7 +186,8 @@
             margin-bottom:200px;
             padding-top:141px;           
         }
-        .sec01 .container{            
+        .sec01 .container{
+            position:relative;
             width:1660px;           
             margin:0 auto;
         }
@@ -218,6 +219,69 @@
         }
         .sec01 .slide06{
             transform:translateX(500%);
+        }
+        .sec01 .slide div{
+            position:absolute;
+            left:270px;
+            top:450px;
+        }
+        .sec01 .slide a{
+            position:absolute;
+            display:block;
+            width:107px;
+        }
+        .sec01 .slide a::before{
+            position:absolute;
+            right:0;
+            top:-6px;
+            content:'';
+            display:block;
+            width:26px;
+            height:26px;
+            border-radius:13px;
+            background:#000;
+        }
+        .sec01 .slide a::after{
+            position:absolute;
+            right:9px;
+            top:1px;
+            content:'';
+            display:block;
+            width:10px;
+            height:10px;
+            border:1px solid #fff;
+            border-left-color:transparent;
+            border-bottom-color:transparent;
+            transform:rotate(45deg);
+        }
+        .sec01 .btn-move{
+            display:flex;
+            justify-content:space-between;
+            position:absolute;
+            left:115px;
+            right:115px;
+            top:50%;
+            transform:translate(0,-50%);            
+        }
+        .sec01 .btn-move a{
+            display:block;
+            width:56px;
+            height:56px;
+            border:1px solid #ccc;
+            border-left-color:transparent;
+            border-bottom-color:transparent;
+            transform:rotate(45deg);
+            text-indent:-999999px;
+        }
+        .sec01 .btn-move a:first-child{
+            transform:rotate(-135deg);
+        }
+        .sec01 .pager{
+            position:absolute;
+            left:210px;
+            right:210px;
+            top:666px;
+            border-top:1px solid #f00;
         }
     </style>
 </head>
@@ -305,7 +369,7 @@
                 <div class="slider">
                     <div class="slide slide01">
                         <img src="./images/main-slide01.jpg" alt="한솔루션">
-                        <div><a href="#">자세히 보기<span>></span></a></div>
+                        <div><a href="#">자세히 보기</a></div>
                     </div>
                     <div class="slide slide02">
                         <img src="./images/main-slide02.jpg" alt="인스퍼">
@@ -328,8 +392,18 @@
                         <div><a href="#">자세히 보기<span>></span></a></div>
                     </div>
                 </div>
-                <div class="btn-move"></div>
-                <div class="pager"></div>
+                <div class="btn-move">
+                    <a href="#">이전버튼</a>
+                    <a href="#">다음버튼</a>
+                </div>
+                <ul class="pager"> 
+                    <li><a href="#">한솔루션</a></li>
+                    <li><a href="#">insper</a></li>
+                    <li><a href="#">인쇄용지</a></li>
+                    <li><a href="#">산업용지</a></li>
+                    <li><a href="#">특수지</a></li>
+                    <li><a href="#">감열지</a></li>
+                </ul>
             </div>
         </section>
         <section class="sec sec02 sec-scd-slider">섹션2</section>
