@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <title>한솔제지</title>
     <style>
         @font-face {
@@ -314,9 +315,7 @@
             max-width:1920px;
             margin:0 auto;
         }
-        .sec02 .slider{
-            display:flex;
-        }
+        
     </style>
 </head>
 <body>
@@ -443,7 +442,7 @@
         </section>
         <section class="sec sec02 sec-scd-slider">
             <div class="container">
-                <div class="slider">
+                <div class="scd-slider">
                     <div class="slide slide01">
                         <div class="slide-cons">
                             <p class="l-txt">한국제지는<br>국내 제지산업의<br>중심입니다.</p>
@@ -479,25 +478,19 @@
                             </div>
                         </div>
                         <div class="img-box"><img src="./images/scd-slide03.jpg" alt="서브슬라이드3"></div>
-                    </div>                    
-                </div>
-                <div class="btn-move">
-                    <a href="#">이전버튼</a>
-                    <a href="#">다음버튼</a>
-                </div>
-                <ul class="pager"> 
-                    <li><a href="#">한솔루션</a></li>
-                    <li><a href="#">insper</a></li>
-                    <li><a href="#">인쇄용지</a></li>
-                    <li><a href="#">산업용지</a></li>
-                    <li><a href="#">특수지</a></li>
-                    <li><a href="#">감열지</a></li>
-                    <!-- ::after -->
-                </ul>
+                    </div>
+                </div>                
             </div>
         </section>
         <section class="sec sec03 sec-together">섹션3</section>
         <footer class="footer">푸터</footer>
     </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $(".scd-slider").bxSlider();
+        });
+    </script>
 </body>
 </html>
