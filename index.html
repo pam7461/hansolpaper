@@ -97,18 +97,18 @@
             width:100%;
         }
         /* 나중에 스크립트로 대체된 내용 */
-        .sub-nav{
+        .sub-nav{           
+            display:none;
             position:absolute;
             left:0;
             top:85px;
-            display:none;
-        }
-        .main-nav>li:first-child .sub-nav{
-            display:flex;
             flex-flow:row nowrap;
             width:1000px;
-            font-size:16px;
-        }
+            font-size:16px;           
+        } 
+        .main-nav>li:hover .sub-nav{
+            display:flex;
+        }       
         .sub-nav li{
             margin-right:32px;
             color:#222;
