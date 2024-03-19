@@ -72,14 +72,14 @@
             font-weight:500;
             font-size:22px;            
         }
-        .main-nav li{
+        .main-nav>li{
             position:relative;
             margin:0 16px;
         }        
-        .main-nav li:hover{
+        .main-nav>li:hover{
             color:#00f;
         }
-        .main-nav li::after{
+        .main-nav>li::after{
             position:absolute;
             left:0;
             top:55px;
@@ -90,14 +90,32 @@
             background:#00f;
             transition:width 0.3s ease 0s;
         }
-        
+
 
         /* 나중에 스크립트로 대체된 내용 */
-        .main-nav li:hover::after{
+        .main-nav>li:hover::after{
             width:100%;
         }
         /* 나중에 스크립트로 대체된 내용 */
-
+        .sub-nav{
+            position:absolute;
+            left:0;
+            top:85px;
+            display:none;
+        }
+        .main-nav>li:first-child .sub-nav{
+            display:flex;
+            flex-flow:row nowrap;
+            width:1000px;
+            font-size:16px;
+        }
+        .sub-nav li{
+            margin-right:32px;
+            color:#222;
+        }
+        .sub-nav li:hover{
+            color:#00f;
+        }
 
         .q-nav ul{
             display:flex;
@@ -159,12 +177,61 @@
                 </h1>
                 <nav>
                     <ul class="main-nav">
-                        <li><a href="#">제품소개</a></li>
-                        <li><a href="#">회사소개</a></li>
-                        <li><a href="#">지속가능경영</a></li>
-                        <li><a href="#">투자정보</a></li>
-                        <li><a href="#">인재채용</a></li>
-                        <li><a href="#">소식</a></li>
+                        <li>
+                            <a href="#">제품소개</a>
+                            <ul class="sub-nav">
+                                <li><a href="#">인스퍼</a></li>
+                                <li><a href="#">인쇄용지</a></li>
+                                <li><a href="#">산업용지</a></li>
+                                <li><a href="#">특수지</a></li>
+                                <li><a href="#">감열지</a></li>
+                                <li><a href="#">신소재</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">회사소개</a>
+                            <ul class="sub-nav">
+                                <li><a href="#">인스퍼</a></li>
+                                <li><a href="#">인쇄용지</a></li>
+                                <li><a href="#">산업용지</a></li>
+                                <li><a href="#">특수지</a></li>
+                                <li><a href="#">감열지</a></li>
+                                <li><a href="#">신소재</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">지속가능경영</a>
+                            <ul class="sub-nav">
+                                <li><a href="#">인스퍼</a></li>
+                                <li><a href="#">인쇄용지</a></li>
+                                <li><a href="#">산업용지</a></li>
+                                <li><a href="#">특수지</a></li>
+                                <li><a href="#">감열지</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">투자정보</a>
+                            <ul class="sub-nav">
+                                <li><a href="#">인스퍼</a></li>
+                                <li><a href="#">인쇄용지</a></li>
+                                <li><a href="#">산업용지</a></li>
+                                <li><a href="#">특수지</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">인재채용</a>
+                            <ul class="sub-nav">
+                                <li><a href="#">인스퍼</a></li>
+                                <li><a href="#">인쇄용지</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">소식</a>
+                            <ul class="sub-nav">
+                                <li><a href="#">인스퍼</a></li>
+                                <li><a href="#">인쇄용지</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
                 <div class="q-nav">
