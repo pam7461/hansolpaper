@@ -26,11 +26,11 @@
             left:0;
             right:0;
             top:0;            
-            z-index:100;            
+            z-index:100;
             border-bottom:1px solid #bbb;
             background:#fff;
         }
-        .container{
+        .header .container{
             display:flex;
             flex-flow:row nowrap;
             justify-content:space-between;
@@ -79,6 +79,20 @@
         .main-nav>li:hover{
             color:#00f;
         }
+        .main-nav>li::before{
+            content:'';
+            display:none;
+            position:fixed;
+            left:0;
+            right:0;
+            top:94px;
+            z-index:1;
+            height:80px;
+            background:#ccc;
+        }
+        .main-nav>li:hover::before{
+            display:block;
+        }
         .main-nav>li::after{
             position:absolute;
             left:0;
@@ -102,6 +116,7 @@
             position:absolute;
             left:0;
             top:85px;
+            z-index:2;
             flex-flow:row nowrap;
             width:1000px;
             font-size:16px;           
@@ -156,6 +171,8 @@
         }
         
         
+
+
         
 
 
@@ -163,6 +180,44 @@
         .sec,.footer{
             position:relative;
             z-index:10;
+        }
+
+        .sec01{
+            margin-bottom:200px;
+            padding-top:141px;           
+        }
+        .sec01 .container{            
+            width:1660px;           
+            margin:0 auto;
+        }
+        .sec01 .slider{
+            position:relative;
+            height:834px;
+            overflow:hidden;
+        }
+        .sec01 .slide{
+            position:absolute;
+            left:0;
+            top:0;
+            transition:0.3s;
+        }
+        .sec01 .slide01{
+            transform:translateX(0%);
+        }
+        .sec01 .slide02{
+            transform:translateX(100%);
+        }
+        .sec01 .slide03{
+            transform:translateX(200%);
+        }
+        .sec01 .slide04{
+            transform:translateX(300%);
+        }
+        .sec01 .slide05{
+            transform:translateX(400%);
+        }
+        .sec01 .slide06{
+            transform:translateX(500%);
         }
     </style>
 </head>
@@ -178,6 +233,7 @@
                 <nav>
                     <ul class="main-nav">
                         <li>
+                            <!-- ::before -->
                             <a href="#">제품소개</a>
                             <ul class="sub-nav">
                                 <li><a href="#">인스퍼</a></li>
@@ -187,6 +243,7 @@
                                 <li><a href="#">감열지</a></li>
                                 <li><a href="#">신소재</a></li>
                             </ul>
+                            <!-- ::after -->
                         </li>
                         <li>
                             <a href="#">회사소개</a>
@@ -243,7 +300,38 @@
                 </div>
             </div>
         </header>
-        <section class="sec sec01 sec-main-slider">섹션1</section>
+        <section class="sec sec01 sec-main-slider">
+            <div class="container">
+                <div class="slider">
+                    <div class="slide slide01">
+                        <img src="./images/main-slide01.jpg" alt="한솔루션">
+                        <div><a href="#">자세히 보기<span>></span></a></div>
+                    </div>
+                    <div class="slide slide02">
+                        <img src="./images/main-slide02.jpg" alt="인스퍼">
+                        <div><a href="#">자세히 보기<span>></span></a></div>
+                    </div>
+                    <div class="slide slide03">
+                        <img src="./images/main-slide03.jpg" alt="인쇄용지">
+                        <div><a href="#">자세히 보기<span>></span></a></div>
+                    </div>
+                    <div class="slide slide04">
+                        <img src="./images/main-slide04.jpg" alt="산업용지">
+                        <div><a href="#">자세히 보기<span>></span></a></div>
+                    </div>
+                    <div class="slide slide05">
+                        <img src="./images/main-slide05.jpg" alt="특수지">
+                        <div><a href="#">자세히 보기<span>></span></a></div>
+                    </div>
+                    <div class="slide slide06">
+                        <img src="./images/main-slide06.jpg" alt="감열지">
+                        <div><a href="#">자세히 보기<span>></span></a></div>
+                    </div>
+                </div>
+                <div class="btn-move"></div>
+                <div class="pager"></div>
+            </div>
+        </section>
         <section class="sec sec02 sec-scd-slider">섹션2</section>
         <section class="sec sec03 sec-together">섹션3</section>
         <footer class="footer">푸터</footer>
