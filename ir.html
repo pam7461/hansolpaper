@@ -24,6 +24,12 @@
         .sec .art h3{
             order:inherit;
         }
+        table,tr,th,td{
+            border:2px solid #ccc;
+        }
+        table,tr:first-child,tr:first-child th{
+            border-top-color:#000;
+        }
         table,tr{
             border-left:none;
             border-right:none;
@@ -33,6 +39,20 @@
         }
         tr td:last-of-type,tr th:nth-child(4){
             border-right:none;
+        }
+        th,td{
+            width:25%;
+            padding:0.5em 1em;
+        }
+        th:first-of-type{
+            background:#eee;
+            text-align:left;
+        }
+        td{
+            text-align:right;
+        }
+        tr:first-child th:first-child{
+            background:transparent;
         }
     </style>
     <title>한솔제지</title>    
