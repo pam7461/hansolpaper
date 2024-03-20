@@ -20,44 +20,38 @@
             display:flex;
             flex-flow:row nowrap;
         } 
-        .tab-nav li{ 
-            position:relative; 
-            z-index:1;                     
+        .tab-nav li{   
+            position:relative;                      
             width:20%;
-            height:82px;
-            border-top:2px solid transparent;
-            border-bottom:2px solid #00f;
+            height:82px;            
             background:#eee;
+            border-bottom:2px solid #00f;
             font-weight:700;
             font-size:22px;
             text-align:center;
             line-height:82px;
         }
-        .tab-nav li::before,.tab-nav li::after{
+        .tab-nav li.active{
+            border:2px solid #00f;
+            border-bottom:none;
+            background:#fff;
+            color:#00f;
+        }
+        .tab-nav li::after{
             position:absolute;
-            top:-2px;
+            right:0;
+            top:0;
             content:'';
             display:block;
             width:2px;
             height:80px;
             background:#fff;
         }
-        .tab-nav li::before{
-            left:-1px;
+        .tab-nav li.active::after,
+        .tab-nav li:last-child::after{
+            display:none;
         }
-        .tab-nav li::after{
-            right:-1px;
-        }
-        .tab-nav li.active{
-            z-index:100;
-            border-color:#00f;
-            border-bottom-color:transparent;
-            background:#fff;
-            color:#00f;
-        }
-        .tab-nav li.active::before,.tab-nav li.active::after{
-            background:#00f;
-        }
+        
     </style>
     <title>한솔제지</title>    
 </head>
