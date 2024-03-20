@@ -10,7 +10,54 @@
     <!-- 한솔제지 서브페이지 공통 스타일 -->
     <link rel="stylesheet" href="./css/sub-page.css">
     <style>
-               
+        h2.l-tit + .img-box{
+            margin-bottom:120px;
+        }    
+        .tab-nav,.sec .art{
+            width:100%;
+        }  
+        .tab-nav{
+            display:flex;
+            flex-flow:row nowrap;
+        } 
+        .tab-nav li{ 
+            position:relative; 
+            z-index:1;                     
+            width:20%;
+            height:82px;
+            border-top:2px solid transparent;
+            border-bottom:2px solid #00f;
+            background:#eee;
+            font-weight:700;
+            font-size:22px;
+            text-align:center;
+            line-height:82px;
+        }
+        .tab-nav li::before,.tab-nav li::after{
+            position:absolute;
+            top:-2px;
+            content:'';
+            display:block;
+            width:2px;
+            height:80px;
+            background:#fff;
+        }
+        .tab-nav li::before{
+            left:-1px;
+        }
+        .tab-nav li::after{
+            right:-1px;
+        }
+        .tab-nav li.active{
+            z-index:100;
+            border-color:#00f;
+            border-bottom-color:transparent;
+            background:#fff;
+            color:#00f;
+        }
+        .tab-nav li.active::before,.tab-nav li.active::after{
+            background:#00f;
+        }
     </style>
     <title>한솔제지</title>    
 </head>
@@ -97,7 +144,7 @@
                 <h2 class="l-tit">그린경영</h2>
                 <div class="img-box"><img src="./images/img-environ.jpg" alt="그린경영"></div>
                 <ul class="tab-nav">
-                    <li><a href="#">녹색비젼 및 방침</a></li>
+                    <li class="active"><a href="#">녹색비젼 및 방침</a></li>
                     <li><a href="#">기후변화 대응</a></li>
                     <li><a href="#">Materal Flow</a></li>
                     <li><a href="#">친환경 인증</a></li>
